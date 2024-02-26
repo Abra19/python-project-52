@@ -5,25 +5,33 @@
 
 
 ### Descriptions
-This project implements an application based on the Flask framework. The app analyses the selected pages for SEO suitability
+This project built with Python and Django framework and implements a task management system that allows you to set tasks, assign executors and change their statuses. Registration and authentication are required to work with the system.
+
+The frontend is rendered on the backend using the Bootstrap framework. Pages are built by the DjangoTemplates backend.
+
+As the object-relational database system we are using PostgreSQL.
 
 ### Requirements
 1. Python >=3.10
 2. poetry >= 1.2.0
-3. Flask >= 3.0.0
-4. gunicorn >= 20.1.0
+3. django >= 5.0.2
+4. django-bootstrap4 >= 24.1
+5. postgreSQL >= 16
+5. gunicorn >= 21.2.0
 
 
 ### To get started
 1. Clone git repo:
-  `git clone git@github.com:Abra19/page_analyzer.git`
-2. Go to directory page_analyzer:
-  `cd page_analyzer`
+  `git@github.com:Abra19/python-project-52.git`
+2. Go to directory python-project-52:
+  `cd python-project-52`
 3.  Configuring `poetry` to create a virtual environment:
   `poetry config virtualenvs.in-project true`
 4.  Create virtual environment and Install dependencies
   `make install`
-5. Start app 
+5. Create `.env` file in the root folder similar to `.env.example`
+5. Start app
+  `make migrate`
   `make start`
 
-### [Try the application](https://page-analyzer-f6z5.onrender.com)
+### [Try the application](https://python-project-52-gbo3.onrender.com)
