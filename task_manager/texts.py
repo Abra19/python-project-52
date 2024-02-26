@@ -1,20 +1,23 @@
+from django.utils.translation import gettext_lazy
+
+
 basic = {
-  'app_title': 'Менеджер задач Hexlet',
-  'task_manager': 'Менеджер задач',
-  'users': 'Пользователи',
-  'login': 'Вход',
-  'register': 'Регистрация',
-  'hexlet': 'Hexlet'
+  'app_title': gettext_lazy('App title'),
+  'task_manager': gettext_lazy('Task Manager'),
+  'users': gettext_lazy('Users'),
+  'login': gettext_lazy('Login'),
+  'register': gettext_lazy('Register'),
+  'hexlet': gettext_lazy('Hexlet'),
 }
 
 # index
-hexlet_hello = 'Привет от Хекслета!'
-hexlet_practice = 'Практические курсы по программированию'
-see_more = 'Узнать больше'
+hexlet_hello = gettext_lazy('Hexlet hello')
+hexlet_practice = gettext_lazy('Hexlet practice')
+see_more = gettext_lazy('See more')
 
 # errors
-not_found = 'Страница не найдена'
-very_complicate = 'Вы слишком далеко зашли в своих поисках'
-return_on_index = 'Вернуться на главную страницу'
-error_occurs = 'Произошла ошибка'
-we_know = 'Мы знаем про нее и уже чиним. Попробуйте снова через несколько минут'
+not_found = gettext_lazy('Not found')
+very_complicate = gettext_lazy('Very complicate')
+return_on_index = gettext_lazy('Return on index')
+error_occurs = gettext_lazy('Error occurs')
+we_know = gettext_lazy('We know')

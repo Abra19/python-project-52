@@ -14,8 +14,8 @@ django = "^5.0.2"
 dj-database-url = "^2.1.0"
 gunicorn = "^21.2.0"
 psycopg2-binary = "^2.9.9"
-django-bootstrap4 = "^24.1"
 whitenoise = "^6.6.0"
+django-bootstrap5 = "^23.4"
 
 
 [tool.poetry.group.dev.dependencies]

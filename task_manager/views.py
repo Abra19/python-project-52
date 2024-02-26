@@ -1,5 +1,14 @@
+from django.http import HttpResponseRedirect
+from django.utils.translation import activate
 from django.views.generic.base import TemplateView
 from task_manager import texts
+
+
+def set_language(request, language):
+    activate(language)
+    response = HttpResponseRedirect(request.META.get('HTTP_REFERER'))
+    response.set_cookie('django_language', language)
+    return response
 
 
 class BasicView(TemplateView):

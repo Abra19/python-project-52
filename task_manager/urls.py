@@ -16,12 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from task_manager.views import IndexView, Error500View, Error404View
+from task_manager import views
 
-handler404 = Error404View.as_view()
-handler500 = Error500View.as_view()
+handler404 = views.Error404View.as_view()
+handler500 = views.Error500View.as_view()
 
 urlpatterns = [
-    path('', IndexView.as_view(), name='index'),
+    path(
+      'set_language/<str:language>/', views.set_language, name='set_language'
+    ),
+    path('', views.IndexView.as_view(), name='index'),
     path('admin/', admin.site.urls),
 ]

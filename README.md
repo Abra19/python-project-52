@@ -15,7 +15,7 @@ As the object-relational database system we are using PostgreSQL.
 1. Python >=3.10
 2. poetry >= 1.2.0
 3. django >= 5.0.2
-4. django-bootstrap4 >= 24.1
+4. django-bootstrap5 >= 23.4
 5. postgreSQL >= 16
 5. gunicorn >= 21.2.0
 
