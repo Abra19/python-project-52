@@ -10,7 +10,7 @@ class BasicView(TemplateView):
             'hexlet_practice': texts.hexlet_practice,
             'see_more': texts.see_more,
         },
-        'erors': {
+        'errors': {
             'error_occurs': texts.error_occurs,
             'we_know': texts.we_know,
             'not_found': texts.not_found,
