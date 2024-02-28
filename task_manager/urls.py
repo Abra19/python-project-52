@@ -28,4 +28,3 @@ urlpatterns = [
 
 handler404 = views.Error404View.as_view()
 handler500 = views.Error500View.as_view()
-
