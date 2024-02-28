@@ -1,23 +1,23 @@
-from django.utils.translation import gettext_lazy
+from django.utils.translation import gettext_lazy as _
 
 
 basic = {
-  'app_title': gettext_lazy('App title'),
-  'task_manager': gettext_lazy('Task Manager'),
-  'users': gettext_lazy('Users'),
-  'login': gettext_lazy('Login'),
-  'register': gettext_lazy('Register'),
-  'hexlet': gettext_lazy('Hexlet'),
+  'app_title': _('App title'),
+  'task_manager': _('Task Manager'),
+  'users': _('Users'),
+  'login': _('Login'),
+  'register': _('Register'),
+  'hexlet': _('Hexlet'),
 }
 
 # index
-hexlet_hello = gettext_lazy('Hexlet hello')
-hexlet_practice = gettext_lazy('Hexlet practice')
-see_more = gettext_lazy('See more')
+hexlet_hello = _('Hexlet hello')
+hexlet_practice = _('Hexlet practice')
+see_more = _('See more')
 
 # errors
-not_found = gettext_lazy('Not found')
-very_complicate = gettext_lazy('Very complicate')
-return_on_index = gettext_lazy('Return on index')
-error_occurs = gettext_lazy('Error occurs')
-we_know = gettext_lazy('We know')
+not_found = _('Not found')
+very_complicate = _('Very complicate')
+return_on_index = _('Return on index')
+error_occurs = _('Error occurs')
+we_know = _('We know')
