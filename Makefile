@@ -19,7 +19,7 @@ static:
 	poetry run python manage.py collectstatic --noinput
 
 createsuperuser:
-	poetry run python manage.py createsuperuser --noinput
+	poetry run python manage.py createsuper
 
 migrate:
 	poetry run python manage.py makemigrations
