@@ -127,6 +127,7 @@ LANGUAGES = (
     ('en', 'English'),
     ('ru', 'Russian'),
 )
+
 USE_I18N = True
 
 LOCALE_PATHS = [
