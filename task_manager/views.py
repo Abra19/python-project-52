@@ -28,7 +28,7 @@ class IndexView(BasicView):
     template_name = 'index.html'
 
 
-class UserLoginView(SuccessMessageMixin,LoginView):
+class UserLoginView(SuccessMessageMixin, LoginView):
     """
     Login user by login form
     Redirect to home page for authorized users
@@ -42,6 +42,7 @@ class UserLoginView(SuccessMessageMixin,LoginView):
     }
     next_page = reverse_lazy('home')
     success_message = texts.messages['logged']
+
 
 class UserLogoutView(LogoutView):
     success_url = reverse_lazy('home')
