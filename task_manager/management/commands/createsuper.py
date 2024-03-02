@@ -1,9 +1,12 @@
 import os
+import django
 from dotenv import load_dotenv
-from django.contrib.auth.models import User
+from task_manager.users.models import User
 from django.core.management.base import BaseCommand
 
 load_dotenv()
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'task_manager.settings')
+django.setup()
 
 
 class Command(BaseCommand):
