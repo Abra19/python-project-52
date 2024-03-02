@@ -20,5 +20,7 @@ class Command(BaseCommand):
                 username=os.getenv('DJANGO_SUPERUSER_USERNAME'),
                 password=os.getenv('DJANGO_SUPERUSER_PASSWORD'),
                 email=os.getenv('DJANGO_SUPERUSER_EMAIL'),
+                first_name=os.getenv('DJANGO_SUPERUSER_FIRST_NAME'),
+                last_name=os.getenv('DJANGO_SUPERUSER_LAST_NAME'),
             )
         print('Superuser has been created.')
