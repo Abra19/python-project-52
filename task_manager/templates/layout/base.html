@@ -15,7 +15,7 @@
       {% include 'layout/header.html' %}
     </header>
     <main class="container wrapper flex-grow-1">
-      {% bootstrap_messages %}
+      <div class="mt-2">{% bootstrap_messages %}</div>
       {% block content %}{% endblock %}
     </main>
     <footer>

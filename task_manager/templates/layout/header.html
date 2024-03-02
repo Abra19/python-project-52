@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'index' %}">{{basic.task_manager}}</a>
+    <a class="navbar-brand" href="{% url 'home' %}">{{basic.task_manager}}</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -8,19 +8,41 @@
     <div class="collapse navbar-collapse d-flex justify-content-between mx-4" id="navbarToggleExternalContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <!-- naming url for users -->
-          <a class="nav-link" href="/users/">{{basic.users}}</a>
+          <a class="nav-link" href="{% url 'users' %}">{{basic.users}}</a>
         </li>
+        {% if user.is_authenticated %}
+        <li class="nav-item">
+          <!-- url for statuses -->
+          <a class="nav-link" href="/statuses/">{{basic.statuses}}</a>
+        </li>
+        <li class="nav-item">
+          <!-- url for labels -->
+          <a class="nav-link" href="/labels/">{{basic.labels}}</a>
+        </li>
+        <li class="nav-item">
+          <!-- url for tasks -->
+          <a class="nav-link" href="/tasks/">{{basic.tasks}}</a>
+        </li>
+        {% endif %}
       </ul>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <!-- naming url for login -->
-          <a class="nav-link" href="/login/">{{basic.login}}</a>
-        </li>
-        <li class="nav-item">
-          <!-- naming url for registration-->
-          <a class="nav-link" href="/users/create/">{{basic.register}}</a>
-        </li>
+     
+      {% if user.is_authenticated %}
+      <form action="{% url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-dark">{{basic.exit}}</button>
+      </form>
+      {% else %}
+      <div class="d-flex">
+        <form action="{% url 'login' %}" method="get">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-dark">{{basic.login}}</button>
+        </form>
+        <form action="{% url 'create' %}" method="get">
+          {% csrf_token %}
+          <button type="submit" class="btn btn-dark">{{basic.register}}</button>
+        </form>
+      </div>
+        {% endif %}
       </ul>
     </div>
   </div>

@@ -1,6 +1,11 @@
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from django.utils.translation import activate
 from django.views.generic.base import TemplateView
+from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.messages.views import SuccessMessageMixin
+from django.contrib import messages
 from task_manager import texts
 
 
@@ -14,23 +19,40 @@ def set_language(request, language):
 class BasicView(TemplateView):
     extra_context = {
         'basic': texts.basic,
-        'texts': {
-            'hexlet_hello': texts.hexlet_hello,
-            'hexlet_practice': texts.hexlet_practice,
-            'see_more': texts.see_more,
-        },
-        'errors': {
-            'error_occurs': texts.error_occurs,
-            'we_know': texts.we_know,
-            'not_found': texts.not_found,
-            'very_complicate': texts.very_complicate,
-            'return_on_index': texts.return_on_index,
-        }
+        'texts': texts.index,
+        'errors': texts.errors,
     }
 
 
 class IndexView(BasicView):
     template_name = 'index.html'
+
+
+class UserLoginView(SuccessMessageMixin,LoginView):
+    """
+    Login user by login form
+    Redirect to home page for authorized users
+    Make message about success with SuccessMessageMixin
+    """
+    template_name = 'login.html'
+    form_class = AuthenticationForm
+    extra_context = {
+        'basic': texts.basic,
+        'login': texts.login,
+    }
+    next_page = reverse_lazy('home')
+    success_message = texts.messages['logged']
+
+class UserLogoutView(LogoutView):
+    success_url = reverse_lazy('home')
+    success_message = texts.messages['logout']
+
+    def get_success_url(self):
+        return self.success_url
+
+    def dispatch(self, request, *args, **kwargs):
+        messages.success(self.request, texts.messages['logout'])
+        return super().dispatch(request, *args, **kwargs)
 
 
 class Error500View(BasicView):

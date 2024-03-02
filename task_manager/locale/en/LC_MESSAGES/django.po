@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-26 20:56+0000\n"
+"POT-Creation-Date: 2024-03-02 15:26+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,7 +36,7 @@ msgstr "Users"
 msgid "Login"
 msgstr "SignIn"
 
-#: task_manager/texts.py:9
+#: task_manager/texts.py:9 task_manager/texts.py:26
 msgid "Register"
 msgstr "SignUp"
 
@@ -44,34 +44,82 @@ msgstr "SignUp"
 msgid "Hexlet"
 msgstr "Hexlet"
 
+#: task_manager/texts.py:11
+msgid "Statuses"
+msgstr "Statuses"
+
+#: task_manager/texts.py:12
+msgid "Labels"
+msgstr "Labels"
+
+#: task_manager/texts.py:13
+msgid "Tasks"
+msgstr "Tasks"
+
 #: task_manager/texts.py:14
+msgid "Exit"
+msgstr "LogOut"
+
+#: task_manager/texts.py:18
 msgid "Hexlet hello"
 msgstr "Hello from Hexlet!"
 
-#: task_manager/texts.py:15
+#: task_manager/texts.py:19
 msgid "Hexlet practice"
 msgstr "Practical courses on programming"
 
-#: task_manager/texts.py:16
+#: task_manager/texts.py:20
 msgid "See more"
 msgstr "Learn more about"
 
-#: task_manager/texts.py:19
-msgid "Not found"
-msgstr "Page not found"
+#: task_manager/texts.py:24
+msgid "First_name"
+msgstr "First name"
 
-#: task_manager/texts.py:20
-msgid "Very complicate"
-msgstr "You've gone too far in your search"
+#: task_manager/texts.py:25
+msgid "Last_name"
+msgstr "Last name"
 
-#: task_manager/texts.py:21
-msgid "Return on index"
-msgstr "Back to home page"
+#: task_manager/texts.py:27
+msgid "Button_text"
+msgstr "Register"
 
-#: task_manager/texts.py:22
+#: task_manager/texts.py:31
+msgid "Enter"
+msgstr "Login"
+
+#: task_manager/texts.py:32
+msgid "Enter_text"
+msgstr "Enter"
+
+#: task_manager/texts.py:36
+msgid "User created"
+msgstr " User successfully registered"
+
+#: task_manager/texts.py:37
+msgid "Logged"
+msgstr "You're logged in"
+
+#: task_manager/texts.py:38
+msgid "Logout"
+msgstr "You're unlogged"
+
+#: task_manager/texts.py:42
 msgid "Error occurs"
 msgstr "There's been an error"
 
-#: task_manager/texts.py:23
+#: task_manager/texts.py:43
 msgid "We know"
 msgstr "We know about it and are already fixing it. Try again in a few minutes"
+
+#: task_manager/texts.py:44
+msgid "Not found"
+msgstr "Page not found"
+
+#: task_manager/texts.py:45
+msgid "Very complicate"
+msgstr "You've gone too far in your search"
+
+#: task_manager/texts.py:46
+msgid "Return on index"
+msgstr "Back to home page"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-02-26 20:57+0000\n"
+"POT-Creation-Date: 2024-03-02 15:27+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,7 +36,7 @@ msgstr "Пользователи"
 msgid "Login"
 msgstr "Вход"
 
-#: task_manager/texts.py:9
+#: task_manager/texts.py:9 task_manager/texts.py:26
 msgid "Register"
 msgstr "Регистрация"
 
@@ -44,34 +44,87 @@ msgstr "Регистрация"
 msgid "Hexlet"
 msgstr "Hexlet"
 
+#: task_manager/texts.py:11
+msgid "Statuses"
+msgstr "Статусы"
+
+#: task_manager/texts.py:12
+msgid "Labels"
+msgstr "Метки"
+
+#: task_manager/texts.py:13
+msgid "Tasks"
+msgstr "Задачи"
+
 #: task_manager/texts.py:14
+msgid "Exit"
+msgstr "Выход"
+
+#: task_manager/texts.py:18
 msgid "Hexlet hello"
 msgstr "Привет от Хекслета!"
 
-#: task_manager/texts.py:15
+#: task_manager/texts.py:19
 msgid "Hexlet practice"
 msgstr "Практические курсы по программированию"
 
-#: task_manager/texts.py:16
+#: task_manager/texts.py:20
 msgid "See more"
 msgstr "Узнать больше"
 
-#: task_manager/texts.py:19
-msgid "Not found"
-msgstr "Страница не найдена"
+#: task_manager/texts.py:24
+msgid "First_name"
+msgstr "Имя"
 
-#: task_manager/texts.py:20
-msgid "Very complicate"
-msgstr "Вы слишком далеко зашли в своих поисках"
+#: task_manager/texts.py:25
+msgid "Last_name"
+msgstr "Фамилия"
 
-#: task_manager/texts.py:21
-msgid "Return on index"
-msgstr "Вернуться на главную страницу"
+#: task_manager/texts.py:27
+msgid "Button_text"
+msgstr "Зарегистрировать"
 
-#: task_manager/texts.py:22
+#: task_manager/texts.py:31
+msgid "Enter"
+msgstr "Вход"
+
+#: task_manager/texts.py:32
+msgid "Enter_text"
+msgstr "Войти"
+
+#: task_manager/texts.py:36
+msgid "User created"
+msgstr "Пользователь успешно зарегистрирован"
+
+#: task_manager/texts.py:37
+msgid "Logged"
+msgstr "Вы залогинены"
+
+#: task_manager/texts.py:38
+msgid "Logout"
+msgstr "Вы разлогинены"
+
+#: task_manager/texts.py:42
 msgid "Error occurs"
 msgstr "Произошла ошибка"
 
-#: task_manager/texts.py:23
+#: task_manager/texts.py:43
 msgid "We know"
 msgstr "Мы знаем про нее и уже чиним. Попробуйте снова через несколько минут"
+
+#: task_manager/texts.py:44
+msgid "Not found"
+msgstr "Страница не найдена"
+
+#: task_manager/texts.py:45
+msgid "Very complicate"
+msgstr "Вы слишком далеко зашли в своих поисках"
+
+#: task_manager/texts.py:46
+msgid "Return on index"
+msgstr "Вернуться на главную страницу"
+
+#, fuzzy
+#~| msgid "Logged"
+#~ msgid "Logged out"
+#~ msgstr "Вы залогинены"
