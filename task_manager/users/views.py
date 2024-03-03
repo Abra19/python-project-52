@@ -37,6 +37,7 @@ class UsersListView(ListView):
         'list': texts.users_list,
     }
 
+
 class UserUpdateView(
     AuthCheckMixin,
     PermissionCheckMixin,
@@ -45,9 +46,12 @@ class UserUpdateView(
 ):
     """
     Change user datas by registration form - UpdateUserForm
-    Using UpdateUserForm allows to make changes while keeping the old username
-    In success redirect to list of users and make message about success with SuccessMessageMixin
-    User can only edit himself - if edit other user redirect to permission_url
+    Using UpdateUserForm allows to make changes while keeping
+    the old username
+    In success redirect to list of users and make message
+    about success with SuccessMessageMixin
+    User can only edit himself - if edit other user redirect
+    to permission_url
     and make permission_message about error with PermissionCheckMixin
     """
     template_name = 'registration.html'
@@ -76,17 +80,19 @@ class UserDeleteView(
 ):
     """
     Delete existing user.
-    In success redirect to list of users and make message about success with SuccessMessageMixin
-    User can only delete himself - if delete other user redirect to permission_url
+    In success redirect to list of users and make message
+    about success with SuccessMessageMixin
+    User can only delete himself - if delete other user
+    redirect to permission_url
     and make permission_message about error with PermissionCheckMixin
     """
     template_name = 'users/delete.html'
     model = User
 
     success_url = reverse_lazy('users')
-    success_message = 'User is successfully deleted'
+    success_message = texts.messages['success_delete']
 
-    permission_message = 'You have no rights to change another user.'
+    permission_message = texts.messages['no_rights']
     permission_url = reverse_lazy('users')
 
     extra_context = {

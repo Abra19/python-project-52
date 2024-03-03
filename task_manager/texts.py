@@ -60,6 +60,7 @@ messages = {
   'no_auth': _('No auth'),
   'success_update': _('Success update'),
   'no_rights': _('No rights'),
+  'success_delete': _('Success delete'),
 }
 
 errors = {

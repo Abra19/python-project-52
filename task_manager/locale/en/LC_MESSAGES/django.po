@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-03 23:55+0300\n"
+"POT-Creation-Date: 2024-03-04 00:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -162,22 +162,26 @@ msgstr "User successfully updated"
 msgid "No rights"
 msgstr "You don't have the rights to update another user."
 
-#: task_manager/texts.py:66
+#: task_manager/texts.py:63
+msgid "Success delete"
+msgstr "User successfully deleted"
+
+#: task_manager/texts.py:67
 msgid "Error occurs"
 msgstr "There's been an error"
 
-#: task_manager/texts.py:67
+#: task_manager/texts.py:68
 msgid "We know"
 msgstr "We know about it and are already fixing it. Try again in a few minutes"
 
-#: task_manager/texts.py:68
+#: task_manager/texts.py:69
 msgid "Not found"
 msgstr "Page not found"
 
-#: task_manager/texts.py:69
+#: task_manager/texts.py:70
 msgid "Very complicate"
 msgstr "You've gone too far in your search"
 
-#: task_manager/texts.py:70
+#: task_manager/texts.py:71
 msgid "Return on index"
 msgstr "Back to home page"

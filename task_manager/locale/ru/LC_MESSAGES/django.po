@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-03 23:55+0300\n"
+"POT-Creation-Date: 2024-03-04 00:22+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -164,22 +164,26 @@ msgstr "Пользователь успешно изменен"
 msgid "No rights"
 msgstr "У вас нет прав для изменения другого пользователя."
 
-#: task_manager/texts.py:66
+#: task_manager/texts.py:63
+msgid "Success delete"
+msgstr "Пользователь успешно удален"
+
+#: task_manager/texts.py:67
 msgid "Error occurs"
 msgstr "Произошла ошибка"
 
-#: task_manager/texts.py:67
+#: task_manager/texts.py:68
 msgid "We know"
 msgstr "Мы знаем про нее и уже чиним. Попробуйте снова через несколько минут"
 
-#: task_manager/texts.py:68
+#: task_manager/texts.py:69
 msgid "Not found"
 msgstr "Страница не найдена"
 
-#: task_manager/texts.py:69
+#: task_manager/texts.py:70
 msgid "Very complicate"
 msgstr "Вы слишком далеко зашли в своих поисках"
 
-#: task_manager/texts.py:70
+#: task_manager/texts.py:71
 msgid "Return on index"
 msgstr "Вернуться на главную страницу"

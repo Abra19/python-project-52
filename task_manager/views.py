@@ -42,7 +42,7 @@ class UserLoginView(SuccessMessageMixin, LoginView):
     }
     next_page = reverse_lazy('home')
     success_message = texts.messages['logged']
-   
+
 
 class UserLogoutView(LogoutView):
     """
