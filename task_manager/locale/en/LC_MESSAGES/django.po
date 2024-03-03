@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 15:26+0300\n"
+"POT-Creation-Date: 2024-03-03 23:55+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,10 +23,8 @@ msgid "App title"
 msgstr "Hexlet Tasks manager"
 
 #: task_manager/texts.py:6
-#, fuzzy
-#| msgid "Task manager"
 msgid "Task Manager"
-msgstr "Tasks manager"
+msgstr "Task Manager"
 
 #: task_manager/texts.py:7
 msgid "Users"
@@ -80,46 +78,106 @@ msgstr "First name"
 msgid "Last_name"
 msgstr "Last name"
 
-#: task_manager/texts.py:27
-msgid "Button_text"
+#: task_manager/texts.py:30
+msgid "Button create"
 msgstr "Register"
 
 #: task_manager/texts.py:31
+msgid "Button update"
+msgstr "Update"
+
+#: task_manager/texts.py:32
+msgid "Button delete"
+msgstr "Yes, delete it"
+
+#: task_manager/texts.py:36
+msgid "List_title"
+msgstr "Users"
+
+#: task_manager/texts.py:37
+msgid "ID"
+msgstr "ID"
+
+#: task_manager/texts.py:38
+msgid "Using name"
+msgstr "Login"
+
+#: task_manager/texts.py:39
+msgid "Full name"
+msgstr "Full name"
+
+#: task_manager/texts.py:40
+msgid "Date joined"
+msgstr "Date joined"
+
+#: task_manager/texts.py:41
+msgid "Update"
+msgstr "Update"
+
+#: task_manager/texts.py:42
+msgid "Delete"
+msgstr "Delete"
+
+#: task_manager/texts.py:46
+msgid "Delete title"
+msgstr "Deleting a user"
+
+#: task_manager/texts.py:47
+msgid "Delete sure"
+msgstr "Are you sure you want to remove"
+
+#: task_manager/texts.py:48
+msgid "Delete cancel"
+msgstr "Back to the list of users"
+
+#: task_manager/texts.py:52
 msgid "Enter"
 msgstr "Login"
 
-#: task_manager/texts.py:32
+#: task_manager/texts.py:53
 msgid "Enter_text"
 msgstr "Enter"
 
-#: task_manager/texts.py:36
+#: task_manager/texts.py:57
 msgid "User created"
-msgstr " User successfully registered"
+msgstr "User successfully registered"
 
-#: task_manager/texts.py:37
+#: task_manager/texts.py:58
 msgid "Logged"
 msgstr "You're logged in"
 
-#: task_manager/texts.py:38
+#: task_manager/texts.py:59
 msgid "Logout"
 msgstr "You're unlogged"
 
-#: task_manager/texts.py:42
+#: task_manager/texts.py:60
+msgid "No auth"
+msgstr "You are not authorised! Please log in."
+
+#: task_manager/texts.py:61
+msgid "Success update"
+msgstr "User successfully updated"
+
+#: task_manager/texts.py:62
+msgid "No rights"
+msgstr "You don't have the rights to update another user."
+
+#: task_manager/texts.py:66
 msgid "Error occurs"
 msgstr "There's been an error"
 
-#: task_manager/texts.py:43
+#: task_manager/texts.py:67
 msgid "We know"
 msgstr "We know about it and are already fixing it. Try again in a few minutes"
 
-#: task_manager/texts.py:44
+#: task_manager/texts.py:68
 msgid "Not found"
 msgstr "Page not found"
 
-#: task_manager/texts.py:45
+#: task_manager/texts.py:69
 msgid "Very complicate"
 msgstr "You've gone too far in your search"
 
-#: task_manager/texts.py:46
+#: task_manager/texts.py:70
 msgid "Return on index"
 msgstr "Back to home page"

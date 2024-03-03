@@ -10,6 +10,6 @@
 <form method="post">
   {% csrf_token %}
   {% bootstrap_form form %}
-  {% bootstrap_button login.enter_text button_type="submit" %}
+  {% bootstrap_button login.enter_text button_type="submit" button_class="btn btn-primary" %}
 </form>
 {% endblock %}

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-02 15:27+0300\n"
+"POT-Creation-Date: 2024-03-03 23:55+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -80,51 +80,106 @@ msgstr "Имя"
 msgid "Last_name"
 msgstr "Фамилия"
 
-#: task_manager/texts.py:27
-msgid "Button_text"
+#: task_manager/texts.py:30
+msgid "Button create"
 msgstr "Зарегистрировать"
 
 #: task_manager/texts.py:31
+msgid "Button update"
+msgstr "Изменить"
+
+#: task_manager/texts.py:32
+msgid "Button delete"
+msgstr "Да, удалить"
+
+#: task_manager/texts.py:36
+msgid "List_title"
+msgstr "Пользователи"
+
+#: task_manager/texts.py:37
+msgid "ID"
+msgstr "ID"
+
+#: task_manager/texts.py:38
+msgid "Using name"
+msgstr "Имя пользователя"
+
+#: task_manager/texts.py:39
+msgid "Full name"
+msgstr "Полное имя"
+
+#: task_manager/texts.py:40
+msgid "Date joined"
+msgstr "Дата создания"
+
+#: task_manager/texts.py:41
+msgid "Update"
+msgstr "Изменить"
+
+#: task_manager/texts.py:42
+msgid "Delete"
+msgstr "Удалить"
+
+#: task_manager/texts.py:46
+msgid "Delete title"
+msgstr "Удаление пользователя"
+
+#: task_manager/texts.py:47
+msgid "Delete sure"
+msgstr "Вы уверены, что хотите удалить"
+
+#: task_manager/texts.py:48
+msgid "Delete cancel"
+msgstr "Вернуться к списку пользователей"
+
+#: task_manager/texts.py:52
 msgid "Enter"
 msgstr "Вход"
 
-#: task_manager/texts.py:32
+#: task_manager/texts.py:53
 msgid "Enter_text"
 msgstr "Войти"
 
-#: task_manager/texts.py:36
+#: task_manager/texts.py:57
 msgid "User created"
 msgstr "Пользователь успешно зарегистрирован"
 
-#: task_manager/texts.py:37
+#: task_manager/texts.py:58
 msgid "Logged"
 msgstr "Вы залогинены"
 
-#: task_manager/texts.py:38
+#: task_manager/texts.py:59
 msgid "Logout"
 msgstr "Вы разлогинены"
 
-#: task_manager/texts.py:42
+#: task_manager/texts.py:60
+msgid "No auth"
+msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
+
+#: task_manager/texts.py:61
+msgid "Success update"
+msgstr "Пользователь успешно изменен"
+
+#: task_manager/texts.py:62
+msgid "No rights"
+msgstr "У вас нет прав для изменения другого пользователя."
+
+#: task_manager/texts.py:66
 msgid "Error occurs"
 msgstr "Произошла ошибка"
 
-#: task_manager/texts.py:43
+#: task_manager/texts.py:67
 msgid "We know"
 msgstr "Мы знаем про нее и уже чиним. Попробуйте снова через несколько минут"
 
-#: task_manager/texts.py:44
+#: task_manager/texts.py:68
 msgid "Not found"
 msgstr "Страница не найдена"
 
-#: task_manager/texts.py:45
+#: task_manager/texts.py:69
 msgid "Very complicate"
 msgstr "Вы слишком далеко зашли в своих поисках"
 
-#: task_manager/texts.py:46
+#: task_manager/texts.py:70
 msgid "Return on index"
 msgstr "Вернуться на главную страницу"
-
-#, fuzzy
-#~| msgid "Logged"
-#~ msgid "Logged out"
-#~ msgstr "Вы залогинены"

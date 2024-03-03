@@ -42,17 +42,18 @@ class UserLoginView(SuccessMessageMixin, LoginView):
     }
     next_page = reverse_lazy('home')
     success_message = texts.messages['logged']
-
+   
 
 class UserLogoutView(LogoutView):
-    success_url = reverse_lazy('home')
-    success_message = texts.messages['logout']
-
-    def get_success_url(self):
-        return self.success_url
+    """
+    Logout user
+    Redirect on home page
+    Change dispatch method to make message about success
+    """
+    next_page = reverse_lazy('home')
 
     def dispatch(self, request, *args, **kwargs):
-        messages.success(self.request, texts.messages['logout'])
+        messages.success(request, texts.messages['logout'])
         return super().dispatch(request, *args, **kwargs)
 
 
