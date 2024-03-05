@@ -31,4 +31,12 @@ dev: migrate
 start:
 	poetry run gunicorn -w 5 -b 0.0.0.0:$(PORT) task_manager.wsgi
 
-PHONY: install lint static migrate dev start
+test:
+	poetry run python3 manage.py test
+
+test-coverage:
+	poetry run coverage run manage.py test
+	poetry run coverage report -m --include=task_manager/* --omit=task_manager/settings.py,*/migrations/*
+	poetry run coverage xml --include=task_manager/* --omit=task_manager/settings.py,*/migrations/*
+
+PHONY: install lint static migrate dev start test

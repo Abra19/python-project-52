@@ -2,6 +2,7 @@
 [![Actions Status](https://github.com/Abra19/python-project-52/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Abra19/python-project-52/actions)
 [![Python CI](https://github.com/Abra19/page_analyzer/actions/workflows/python_ci.yml/badge.svg)](https://github.com/Abra19/page_analyzer/actions/workflows/python_ci.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/e08d3f09e7d1220cad9b/maintainability)](https://codeclimate.com/github/Abra19/python-project-52/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/e08d3f09e7d1220cad9b/test_coverage)](https://codeclimate.com/github/Abra19/python-project-52/test_coverage)
 
 
 ### Descriptions
