@@ -29,6 +29,9 @@ jobs:
       - name: Run linter
         run: |
           make lint
+      - name: Collect static
+        run: |
+          make static
       - name: Run tests
         run: |
           make test
