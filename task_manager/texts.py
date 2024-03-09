@@ -25,6 +25,7 @@ create_user = {
   'last_name': _('Last_name'),
   'register': _('Register'),
   'update_title': _('Update title'),
+  'label_create': _('Label create'),
 }
 
 buttons = {
@@ -32,6 +33,7 @@ buttons = {
   'update_button': _('Button update'),
   'delete_button': _('Button delete'),
   'create_status': _('Create status button'),
+  "create_label": _('Create label button'),
 }
 
 users_list = {
@@ -65,6 +67,32 @@ create_status = {
   'status_delete': _('Delete status'),
   'status_change_title': _('Change status'),
   'status_delete_title': _('Title delete status'),
+  'back_to_statuses': _('Back to the list of statuses'),
+}
+
+create_label = {
+  'label_name': _('Status name'),
+  'label_title': _('Label title'),
+  'label_create': _('Create label'),
+  'label_id': _('Status ID'),
+  'label_date': _('Status date'),
+  'label_update': _('Update'),
+  'label_delete': _('Delete'),
+  'label_change_title': _('Change label'),
+  'label_delete_title': _('Title delete label'),
+  'back_to_labels': _('Back to the list of labels'),
+}
+
+texts = {
+  'basic': basic,
+  'index': index,
+  'create_user': create_user,
+  'buttons': buttons,
+  'users_list': users_list,
+  'delete_user': delete_user,
+  'login': login,
+  'create_status': create_status,
+  'create_label': create_label
 }
 
 messages = {
@@ -79,6 +107,10 @@ messages = {
   'status_changed': _('Status changed'),
   'status_deleted': _('Status deleted'),
   'protected_status': _('Protected status'),
+  'label_created': _('Label created'),
+  'label_changed': _('Label changed'),
+  'protected_label': _('Protected label'),
+  'label_deleted': _('Label deleted'),
 }
 
 errors = {

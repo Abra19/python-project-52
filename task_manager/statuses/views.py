@@ -76,7 +76,6 @@ class StatusDeleteView(
     If the status is associated with at least one task it cannot be deleted.
     Only for authorized users
     """
-    pass
     template_name = 'delete.html'
     model = Status
 
@@ -91,7 +90,7 @@ class StatusDeleteView(
         'title': texts.create_status['status_delete_title'],
         'delete_sure': texts.delete_user['delete_sure'],
         'dest_url': reverse_lazy('statuses'),
-        'delete_cancel': texts.delete_user['delete_cancel'],
+        'delete_cancel': texts.create_status['back_to_statuses'],
         'button_text': texts.buttons['delete_button']
     }
 

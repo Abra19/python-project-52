@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-07 01:32+0300\n"
+"POT-Creation-Date: 2024-03-09 21:10+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -84,166 +84,214 @@ msgstr "Фамилия"
 msgid "Update title"
 msgstr "Изменение пользователя"
 
-#: task_manager/texts.py:31
+#: task_manager/texts.py:28
+msgid "Label create"
+msgstr "Создать метку"
+
+#: task_manager/texts.py:32
 msgid "Button create"
 msgstr "Зарегистрировать"
 
-#: task_manager/texts.py:32
+#: task_manager/texts.py:33
 msgid "Button update"
 msgstr "Изменить"
 
-#: task_manager/texts.py:33
+#: task_manager/texts.py:34
 msgid "Button delete"
 msgstr "Да, удалить"
 
-#: task_manager/texts.py:34
+#: task_manager/texts.py:35
 msgid "Create status button"
 msgstr "Создать статус"
 
-#: task_manager/texts.py:38
+#: task_manager/texts.py:36
+msgid "Create label button"
+msgstr "Создать"
+
+#: task_manager/texts.py:40
 msgid "List_title"
 msgstr "Пользователи"
 
-#: task_manager/texts.py:39
+#: task_manager/texts.py:41
 msgid "ID"
 msgstr "ID"
 
-#: task_manager/texts.py:40
+#: task_manager/texts.py:42
 msgid "Using name"
 msgstr "Имя пользователя"
 
-#: task_manager/texts.py:41
+#: task_manager/texts.py:43
 msgid "Full name"
 msgstr "Полное имя"
 
-#: task_manager/texts.py:42
+#: task_manager/texts.py:44
 msgid "Date joined"
 msgstr "Дата создания"
 
-#: task_manager/texts.py:43
+#: task_manager/texts.py:45 task_manager/texts.py:79
 msgid "Update"
 msgstr "Изменить"
 
-#: task_manager/texts.py:44
+#: task_manager/texts.py:46 task_manager/texts.py:80
 msgid "Delete"
 msgstr "Удалить"
 
-#: task_manager/texts.py:48
+#: task_manager/texts.py:50
 msgid "Delete title"
 msgstr "Удаление пользователя"
 
-#: task_manager/texts.py:49
+#: task_manager/texts.py:51
 msgid "Delete sure"
 msgstr "Вы уверены, что хотите удалить"
 
-#: task_manager/texts.py:50
+#: task_manager/texts.py:52
 msgid "Delete cancel"
 msgstr "Вернуться к списку пользователей"
 
-#: task_manager/texts.py:54
+#: task_manager/texts.py:56
 msgid "Enter"
 msgstr "Вход"
 
-#: task_manager/texts.py:55
+#: task_manager/texts.py:57
 msgid "Enter_text"
 msgstr "Войти"
 
-#: task_manager/texts.py:59
+#: task_manager/texts.py:61 task_manager/texts.py:74
 msgid "Status name"
 msgstr "Имя"
 
-#: task_manager/texts.py:60
+#: task_manager/texts.py:62
 msgid "Status title"
 msgstr "Статусы"
 
-#: task_manager/texts.py:61
+#: task_manager/texts.py:63
 msgid "Create status"
 msgstr "Создать статус"
 
-#: task_manager/texts.py:62
+#: task_manager/texts.py:64 task_manager/texts.py:77
 msgid "Status ID"
 msgstr "ID"
 
-#: task_manager/texts.py:63
+#: task_manager/texts.py:65 task_manager/texts.py:78
 msgid "Status date"
 msgstr "Дата создания"
 
-#: task_manager/texts.py:64
+#: task_manager/texts.py:66
 msgid "Update status"
 msgstr "Изменить"
 
-#: task_manager/texts.py:65
+#: task_manager/texts.py:67
 msgid "Delete status"
 msgstr "Удалить"
 
-#: task_manager/texts.py:66
+#: task_manager/texts.py:68
 msgid "Change status"
 msgstr "Изменение статуса"
 
-#: task_manager/texts.py:67
+#: task_manager/texts.py:69
 msgid "Title delete status"
 msgstr "Удаление статуса"
 
-#: task_manager/texts.py:71
+#: task_manager/texts.py:70
+msgid "Back to the list of statuses"
+msgstr "Вернуться к списку статусов"
+
+#: task_manager/texts.py:75
+msgid "Label title"
+msgstr "Метки"
+
+#: task_manager/texts.py:76
+msgid "Create label"
+msgstr "Создать метку"
+
+#: task_manager/texts.py:81
+msgid "Change label"
+msgstr "Изменение метки"
+
+#: task_manager/texts.py:82
+msgid "Title delete label"
+msgstr "Удаление метки"
+
+#: task_manager/texts.py:83
+msgid "Back to the list of labels"
+msgstr "Вернуться к списку меток"
+
+#: task_manager/texts.py:99
 msgid "User created"
 msgstr "Пользователь успешно зарегистрирован"
 
-#: task_manager/texts.py:72
+#: task_manager/texts.py:100
 msgid "Logged"
 msgstr "Вы залогинены"
 
-#: task_manager/texts.py:73
+#: task_manager/texts.py:101
 msgid "Logout"
 msgstr "Вы разлогинены"
 
-#: task_manager/texts.py:74
+#: task_manager/texts.py:102
 msgid "No auth"
 msgstr "Вы не авторизованы! Пожалуйста, выполните вход."
 
-#: task_manager/texts.py:75
+#: task_manager/texts.py:103
 msgid "Success update"
 msgstr "Пользователь успешно изменен"
 
-#: task_manager/texts.py:76
+#: task_manager/texts.py:104
 msgid "No rights"
 msgstr "У вас нет прав для изменения другого пользователя."
 
-#: task_manager/texts.py:77
+#: task_manager/texts.py:105
 msgid "Success delete"
 msgstr "Пользователь успешно удален"
 
-#: task_manager/texts.py:78
+#: task_manager/texts.py:106
 msgid "Status created"
 msgstr "Статус успешно создан"
 
-#: task_manager/texts.py:79
+#: task_manager/texts.py:107
 msgid "Status changed"
 msgstr "Статус успешно изменен"
 
-#: task_manager/texts.py:80
+#: task_manager/texts.py:108
 msgid "Status deleted"
 msgstr "Статус успешно удален"
 
-#: task_manager/texts.py:81
+#: task_manager/texts.py:109
 msgid "Protected status"
 msgstr "Невозможно удалить статус, потому что он используется"
 
-#: task_manager/texts.py:85
+#: task_manager/texts.py:110
+msgid "Label created"
+msgstr "Метка успешно создана"
+
+#: task_manager/texts.py:111
+msgid "Label changed"
+msgstr "Метка успешно изменена"
+
+#: task_manager/texts.py:112
+msgid "Protected label"
+msgstr "Невозможно удалить метку, потому что она используется"
+
+#: task_manager/texts.py:113
+msgid "Label deleted"
+msgstr "Метка успешно удалена"
+
+#: task_manager/texts.py:117
 msgid "Error occurs"
 msgstr "Произошла ошибка"
 
-#: task_manager/texts.py:86
+#: task_manager/texts.py:118
 msgid "We know"
 msgstr "Мы знаем про нее и уже чиним. Попробуйте снова через несколько минут"
 
-#: task_manager/texts.py:87
+#: task_manager/texts.py:119
 msgid "Not found"
 msgstr "Страница не найдена"
 
-#: task_manager/texts.py:88
+#: task_manager/texts.py:120
 msgid "Very complicate"
 msgstr "Вы слишком далеко зашли в своих поисках"
 
-#: task_manager/texts.py:89
+#: task_manager/texts.py:121
 msgid "Return on index"
 msgstr "Вернуться на главную страницу"

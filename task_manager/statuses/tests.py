@@ -37,7 +37,7 @@ class StatusesTest(TestCase):
             template_name='statuses/statuses.html'
         )
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, '/statuses/create/')
+        self.assertContains(response, reverse_lazy('create_status'))
         self.assertContains(response, self.status1.name)
         self.assertContains(response, self.status2.name)
         self.assertContains(response, self.status3.name)
