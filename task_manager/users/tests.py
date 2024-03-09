@@ -1,5 +1,6 @@
 from django.test import TestCase, Client
 from django.urls import reverse_lazy
+from django.core.exceptions import ObjectDoesNotExist
 
 from task_manager.users.models import User
 
@@ -12,15 +13,15 @@ class UsersTest(TestCase):
           'last_name': 'Test',
           'password1': '123',
           'password2': '123',
-        }
+    }
 
-    def setUp(self) -> None:
+    def setUp(self):
         self.client = Client()
         self.user1 = User.objects.get(pk=1)
         self.user2 = User.objects.get(pk=2)
         self.user3 = User.objects.get(pk=3)
 
-    def test_users(self) -> None:
+    def test_users(self):
         response = self.client.get(reverse_lazy('users'))
         users_list = list(response.context['users'])
         user1, user2, user3 = users_list
@@ -85,7 +86,7 @@ class UsersTest(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse_lazy('users'))
 
-    def test_user_update_post(self) -> None:
+    def test_user_update_post(self):
         params = self.test_user
         self.client.force_login(self.user1)
         response = self.client.post(
@@ -120,3 +121,5 @@ class UsersTest(TestCase):
         self.assertTrue(after_objs_len == before_objs_len - 1)
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse_lazy('users'))
+        with self.assertRaises(ObjectDoesNotExist):
+            User.objects.get(id=self.user1.id)

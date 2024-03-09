@@ -6,13 +6,13 @@ install:
 lint:
 	poetry run flake8 task_manager
 
-collect_ru:
+collect-ru:
 	poetry run django-admin makemessages -l ru
 
-collect_en:
+collect-en:
 	poetry run django-admin makemessages -l en
 
-compile_texts:
+compile-texts:
 	poetry run django-admin compilemessages
 
 static:
