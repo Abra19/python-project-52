@@ -36,6 +36,18 @@ class PermissionCheckMixin(UserPassesTestMixin):
         return redirect(self.permission_url)
 
 
+class AuthorCheckMixin(PermissionCheckMixin):
+    """
+    Test if current user is the author of the object
+    If not - make permission_message and redirect to permission_url
+    from parent class
+    Concret message and url in corresponding View
+    """
+
+    def test_func(self):
+        return self.get_object().author == self.request.user
+
+
 class ProtectDeleteMixin:
     """
     Protect deletion of object in use by other object

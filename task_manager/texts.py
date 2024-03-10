@@ -33,7 +33,8 @@ buttons = {
   'update_button': _('Button update'),
   'delete_button': _('Button delete'),
   'create_status': _('Create status button'),
-  "create_label": _('Create label button'),
+  'create_label': _('Create label button'),
+  'demonstrate': _('Demonstrate'),
 }
 
 users_list = {
@@ -83,16 +84,25 @@ create_label = {
   'back_to_labels': _('Back to the list of labels'),
 }
 
-texts = {
-  'basic': basic,
-  'index': index,
-  'create_user': create_user,
-  'buttons': buttons,
-  'users_list': users_list,
-  'delete_user': delete_user,
-  'login': login,
-  'create_status': create_status,
-  'create_label': create_label
+create_tasks = {
+  'task_name': _('Status name'),
+  'task_description': _('Task description'),
+  'task_date': _('Task date'),
+  'tasks_title': _('Task title'),
+  'task_create': _('Create task'),
+  'task_label': _('Task label'),
+  'personal_tasks': _('Personal tasks'),
+  'task_author': _('Task author'),
+  'task_status': _('Task status'),
+  'task_executor': _('Task executor'),
+  'task_id': _('Task ID'),
+  'task_update': _('Update'),
+  'task_delete': _('Delete'),
+  'task_detail_title': _('Task detail title'),
+  'task_labels': _('Task labels'),
+  'task_detail_cancel': _('Task detail cancel'),
+  'task_update_title': _('Task update title'),
+  'task_delete_title': _('Task delete title'),
 }
 
 messages = {
@@ -111,6 +121,10 @@ messages = {
   'label_changed': _('Label changed'),
   'protected_label': _('Protected label'),
   'label_deleted': _('Label deleted'),
+  'task_created': _('Task created'),
+  'task_changed': _('Task changed'),
+  'protected_task': _('No delete task'),
+  'task_deleted': _('Task deleted'),
 }
 
 errors = {

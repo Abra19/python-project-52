@@ -7,7 +7,7 @@ from task_manager import texts
 from task_manager.custom_mixins import AuthCheckMixin, ProtectDeleteMixin
 
 
-class StatusesListView(ListView):
+class StatusesListView(AuthCheckMixin, ListView):
     """
     List of status
     Access only for auth users

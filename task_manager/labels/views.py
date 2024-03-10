@@ -7,7 +7,7 @@ from task_manager import texts
 from task_manager.custom_mixins import AuthCheckMixin, ProtectDeleteMixin
 
 
-class LabelsListView(ListView):
+class LabelsListView(AuthCheckMixin, ListView):
     """
     List of labels
     Access only for auth users
