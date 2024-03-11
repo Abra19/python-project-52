@@ -1,12 +1,14 @@
 from django.test import TestCase, Client
 from django.urls import reverse_lazy
 from django.core.exceptions import ObjectDoesNotExist
+from django.db.models.deletion import ProtectedError
 
 from task_manager.users.models import User
+from task_manager import texts
 
 
 class UsersTest(TestCase):
-    fixtures = ['users.json']
+    fixtures = ['users.json', 'statuses.json', 'tasks.json', 'labels.json']
     test_user = {
           'username': 'Test',
           'first_name': 'Test',
@@ -52,13 +54,16 @@ class UsersTest(TestCase):
         params.update({'username': ''})
         response = self.client.post(reverse_lazy('create'), data=params)
         errors = response.context['form'].errors
+
         self.assertIn('username', errors)
         self.assertEqual(
             ['Обязательное поле.'],
             errors['username']
         )
+
         params.update({'username': 'Test1'})
         response = self.client.post(reverse_lazy('create'), data=params)
+
         self.assertTrue(User.objects.get(id=4))
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse_lazy('login'))
@@ -68,6 +73,7 @@ class UsersTest(TestCase):
         response = self.client.get(
             reverse_lazy('user_update', args=[self.user1.id])
         )
+
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, template_name='registration.html')
 
@@ -75,6 +81,7 @@ class UsersTest(TestCase):
         response = self.client.get(
             reverse_lazy('user_update', args=[self.user1.id])
         )
+
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse_lazy('login'))
 
@@ -83,12 +90,13 @@ class UsersTest(TestCase):
         response = self.client.get(
             reverse_lazy('user_update', args=[self.user1.id])
         )
+
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse_lazy('users'))
 
     def test_user_update_post(self):
-        params = self.test_user
         self.client.force_login(self.user1)
+        params = self.test_user
         response = self.client.post(
             reverse_lazy('user_update', args=[self.user1.id]),
             data=params
@@ -98,6 +106,7 @@ class UsersTest(TestCase):
         self.assertRedirects(response, reverse_lazy('users'))
 
         updated_user = User.objects.get(id=self.user1.id)
+
         self.assertEqual(updated_user.username, params['username'])
         self.assertEqual(updated_user.first_name, params['first_name'])
         self.assertEqual(updated_user.last_name, params['last_name'])
@@ -107,14 +116,15 @@ class UsersTest(TestCase):
         response = self.client.get(
             reverse_lazy('user_delete', args=[self.user1.id])
         )
+
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, template_name='delete.html')
 
     def test_user_delete_post(self):
+        self.client.force_login(self.user3)
         before_objs_len = len(User.objects.all())
-        self.client.force_login(self.user1)
         response = self.client.post(
-            reverse_lazy('user_delete', args=[self.user1.id])
+            reverse_lazy('user_delete', args=[self.user3.id])
         )
         after_objs_len = len(User.objects.all())
 
@@ -122,4 +132,17 @@ class UsersTest(TestCase):
         self.assertEqual(response.status_code, 302)
         self.assertRedirects(response, reverse_lazy('users'))
         with self.assertRaises(ObjectDoesNotExist):
-            User.objects.get(id=self.user1.id)
+            User.objects.get(id=self.user3.id)
+
+    def test_user_delete_linked(self):
+        self.client.force_login(self.user2)
+        before_objs_len = len(User.objects.all())
+        self.client.post(
+            reverse_lazy('user_delete', args=[self.user2.id])
+        )
+        after_objs_len = len(User.objects.all())
+        self.assertTrue(after_objs_len == before_objs_len)
+        self.assertRaisesMessage(
+            expected_exception=ProtectedError,
+            expected_message=texts.messages['no_rights']
+        )

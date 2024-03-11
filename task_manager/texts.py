@@ -113,6 +113,7 @@ messages = {
   'success_update': _('Success update'),
   'no_rights': _('No rights'),
   'success_delete': _('Success delete'),
+  'protected_user': _('Protected user'),
   'status_created': _('Status created'),
   'status_changed': _('Status changed'),
   'status_deleted': _('Status deleted'),

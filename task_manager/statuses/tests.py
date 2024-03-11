@@ -1,13 +1,15 @@
 from django.test import TestCase, Client
 from django.urls import reverse_lazy
 from django.core.exceptions import ObjectDoesNotExist
+from django.db.models.deletion import ProtectedError
 
 from task_manager.statuses.models import Status
 from task_manager.users.models import User
+from task_manager import texts
 
 
 class StatusesTest(TestCase):
-    fixtures = ['statuses.json', 'users.json']
+    fixtures = ['statuses.json', 'users.json', 'tasks.json', 'labels.json']
     test_status = {
         'name': 'Test'
     }
@@ -104,4 +106,14 @@ class StatusesTest(TestCase):
         with self.assertRaises(ObjectDoesNotExist):
             Status.objects.get(id=self.status1.id)
 
-# test on linked status deletion - TODO
+    def test_status_delete_linked(self):
+        before_objs_len = len(Status.objects.all())
+        self.client.post(
+            reverse_lazy('delete_status', args=[self.status2.id])
+        )
+        after_objs_len = len(Status.objects.all())
+        self.assertTrue(after_objs_len == before_objs_len)
+        self.assertRaisesMessage(
+            expected_exception=ProtectedError,
+            expected_message=texts.messages['protected_status']
+        )

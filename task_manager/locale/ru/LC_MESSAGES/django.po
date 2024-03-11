@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-11 01:26+0300\n"
+"POT-Creation-Date: 2024-03-12 01:11+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -309,69 +309,73 @@ msgid "Success delete"
 msgstr "Пользователь успешно удален"
 
 #: task_manager/texts.py:116
+msgid "Protected user"
+msgstr "Невозможно удалить пользователя, потому что он используется"
+
+#: task_manager/texts.py:117
 msgid "Status created"
 msgstr "Статус успешно создан"
 
-#: task_manager/texts.py:117
+#: task_manager/texts.py:118
 msgid "Status changed"
 msgstr "Статус успешно изменен"
 
-#: task_manager/texts.py:118
+#: task_manager/texts.py:119
 msgid "Status deleted"
 msgstr "Статус успешно удален"
 
-#: task_manager/texts.py:119
+#: task_manager/texts.py:120
 msgid "Protected status"
 msgstr "Невозможно удалить статус, потому что он используется"
 
-#: task_manager/texts.py:120
+#: task_manager/texts.py:121
 msgid "Label created"
 msgstr "Метка успешно создана"
 
-#: task_manager/texts.py:121
+#: task_manager/texts.py:122
 msgid "Label changed"
 msgstr "Метка успешно изменена"
 
-#: task_manager/texts.py:122
+#: task_manager/texts.py:123
 msgid "Protected label"
 msgstr "Невозможно удалить метку, потому что она используется"
 
-#: task_manager/texts.py:123
+#: task_manager/texts.py:124
 msgid "Label deleted"
 msgstr "Метка успешно удалена"
 
-#: task_manager/texts.py:124
+#: task_manager/texts.py:125
 msgid "Task created"
 msgstr "Задача успешно создана"
 
-#: task_manager/texts.py:125
+#: task_manager/texts.py:126
 msgid "Task changed"
 msgstr "Задача успешно изменена"
 
-#: task_manager/texts.py:126
+#: task_manager/texts.py:127
 msgid "No delete task"
 msgstr "Задачу может удалить только ее автор"
 
-#: task_manager/texts.py:127
+#: task_manager/texts.py:128
 msgid "Task deleted"
 msgstr "Задача успешно удалена"
 
-#: task_manager/texts.py:131
+#: task_manager/texts.py:132
 msgid "Error occurs"
 msgstr "Произошла ошибка"
 
-#: task_manager/texts.py:132
+#: task_manager/texts.py:133
 msgid "We know"
 msgstr "Мы знаем про нее и уже чиним. Попробуйте снова через несколько минут"
 
-#: task_manager/texts.py:133
+#: task_manager/texts.py:134
 msgid "Not found"
 msgstr "Страница не найдена"
 
-#: task_manager/texts.py:134
+#: task_manager/texts.py:135
 msgid "Very complicate"
 msgstr "Вы слишком далеко зашли в своих поисках"
 
-#: task_manager/texts.py:135
+#: task_manager/texts.py:136
 msgid "Return on index"
 msgstr "Вернуться на главную страницу"

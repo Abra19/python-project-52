@@ -1,13 +1,15 @@
 from django.test import TestCase, Client
 from django.urls import reverse_lazy
 from django.core.exceptions import ObjectDoesNotExist
+from django.db.models.deletion import ProtectedError
 
 from task_manager.labels.models import Label
 from task_manager.users.models import User
+from task_manager import texts
 
 
 class LabelsTest(TestCase):
-    fixtures = ['labels.json', 'users.json']
+    fixtures = ['tasks.json', 'labels.json', 'statuses.json', 'users.json']
     test_label = {
         'name': 'For test'
     }
@@ -104,4 +106,14 @@ class LabelsTest(TestCase):
         with self.assertRaises(ObjectDoesNotExist):
             Label.objects.get(id=self.label1.id)
 
-# test on linked status deletion - TODO
+    def test_status_delete_linked(self):
+        before_objs_len = len(Label.objects.all())
+        self.client.post(
+            reverse_lazy('delete_label', args=[self.label2.id])
+        )
+        after_objs_len = len(Label.objects.all())
+        self.assertTrue(after_objs_len == before_objs_len)
+        self.assertRaisesMessage(
+            expected_exception=ProtectedError,
+            expected_message=texts.messages['protected_label']
+        )

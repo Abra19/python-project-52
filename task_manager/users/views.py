@@ -4,7 +4,8 @@ from django.urls import reverse_lazy
 from task_manager.users.models import User
 from task_manager.users.forms import UserForm, UpdateUserForm
 from task_manager import texts
-from task_manager.custom_mixins import AuthCheckMixin, PermissionCheckMixin
+from task_manager.custom_mixins import AuthCheckMixin, \
+    PermissionCheckMixin, ProtectDeleteMixin
 
 
 class UserCreateView(SuccessMessageMixin, CreateView):
@@ -75,6 +76,7 @@ class UserUpdateView(
 class UserDeleteView(
     AuthCheckMixin,
     PermissionCheckMixin,
+    ProtectDeleteMixin,
     SuccessMessageMixin,
     DeleteView
 ):
@@ -85,6 +87,7 @@ class UserDeleteView(
     User can only delete himself - if delete other user
     redirect to permission_url
     and make permission_message about error with PermissionCheckMixin
+    Can not delete user associated with tasks
     """
     template_name = 'delete.html'
     model = User
@@ -94,6 +97,9 @@ class UserDeleteView(
 
     permission_message = texts.messages['no_rights']
     permission_url = reverse_lazy('users')
+
+    protected_message = texts.messages['protected_user']
+    protected_url = reverse_lazy('users')
 
     extra_context = {
         'basic': texts.basic,

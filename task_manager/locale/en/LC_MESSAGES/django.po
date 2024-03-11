@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-11 01:27+0300\n"
+"POT-Creation-Date: 2024-03-12 01:11+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -307,69 +307,73 @@ msgid "Success delete"
 msgstr "User successfully deleted"
 
 #: task_manager/texts.py:116
+msgid "Protected user"
+msgstr "Cannot delete an user because it is in use"
+
+#: task_manager/texts.py:117
 msgid "Status created"
 msgstr "Status successfully created"
 
-#: task_manager/texts.py:117
+#: task_manager/texts.py:118
 msgid "Status changed"
 msgstr "Status successfully changed"
 
-#: task_manager/texts.py:118
+#: task_manager/texts.py:119
 msgid "Status deleted"
 msgstr "Status successfully deleted"
 
-#: task_manager/texts.py:119
+#: task_manager/texts.py:120
 msgid "Protected status"
 msgstr "Cannot delete a status because it is in use"
 
-#: task_manager/texts.py:120
+#: task_manager/texts.py:121
 msgid "Label created"
 msgstr "The label has been successfully created"
 
-#: task_manager/texts.py:121
+#: task_manager/texts.py:122
 msgid "Label changed"
 msgstr "The label has been successfully changed"
 
-#: task_manager/texts.py:122
+#: task_manager/texts.py:123
 msgid "Protected label"
 msgstr "Cannot delete the label because it is in use"
 
-#: task_manager/texts.py:123
+#: task_manager/texts.py:124
 msgid "Label deleted"
 msgstr "The label has been successfully deleted"
 
-#: task_manager/texts.py:124
+#: task_manager/texts.py:125
 msgid "Task created"
 msgstr "Task successfully created"
 
-#: task_manager/texts.py:125
+#: task_manager/texts.py:126
 msgid "Task changed"
 msgstr "The task has been successfully updated"
 
-#: task_manager/texts.py:126
+#: task_manager/texts.py:127
 msgid "No delete task"
 msgstr "A task can only be deleted by its author"
 
-#: task_manager/texts.py:127
+#: task_manager/texts.py:128
 msgid "Task deleted"
 msgstr "Task successfully deleted"
 
-#: task_manager/texts.py:131
+#: task_manager/texts.py:132
 msgid "Error occurs"
 msgstr "There's been an error"
 
-#: task_manager/texts.py:132
+#: task_manager/texts.py:133
 msgid "We know"
 msgstr "We know about it and are already fixing it. Try again in a few minutes"
 
-#: task_manager/texts.py:133
+#: task_manager/texts.py:134
 msgid "Not found"
 msgstr "Page not found"
 
-#: task_manager/texts.py:134
+#: task_manager/texts.py:135
 msgid "Very complicate"
 msgstr "You've gone too far in your search"
 
-#: task_manager/texts.py:135
+#: task_manager/texts.py:136
 msgid "Return on index"
 msgstr "Back to home page"
