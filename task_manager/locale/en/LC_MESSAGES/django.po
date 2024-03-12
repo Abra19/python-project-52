@@ -100,7 +100,7 @@ msgstr "Yes, delete it"
 
 #: task_manager/texts.py:35
 msgid "Create status button"
-msgstr "Create status"
+msgstr "Create"
 
 #: task_manager/texts.py:36
 msgid "Create label button"

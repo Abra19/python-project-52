@@ -102,7 +102,7 @@ msgstr "Да, удалить"
 
 #: task_manager/texts.py:35
 msgid "Create status button"
-msgstr "Создать статус"
+msgstr "Создать"
 
 #: task_manager/texts.py:36
 msgid "Create label button"
