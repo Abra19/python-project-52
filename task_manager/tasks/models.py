@@ -29,11 +29,13 @@ class Task(models.Model):
     )
     status = models.ForeignKey(
         Status,
+        blank=False,
         on_delete=models.PROTECT,
         verbose_name=create_tasks['task_status']
     )
     executor = models.ForeignKey(
         User,
+        blank=True,
         on_delete=models.PROTECT,
         verbose_name=create_tasks['task_executor'],
         related_name='executor'
