@@ -43,7 +43,7 @@ class Task(models.Model):
         through='TaskLabelLinks',
         through_fields=('task', 'label'),
         blank=True,
-        verbose_name=create_tasks['task_label']
+        verbose_name=create_tasks['task_labels']
     )
 
 
