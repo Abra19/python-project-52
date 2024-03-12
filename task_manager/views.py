@@ -1,4 +1,4 @@
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.utils.translation import activate
 from django.views.generic.base import TemplateView
@@ -8,10 +8,6 @@ from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib import messages
 from task_manager import texts
 
-def index(request):
-    a = None
-    a.hello() # Creating an error with an invalid line of code
-    return HttpResponse("Hello, world. You're at the pollapp index.")
 
 def set_language(request, language):
     activate(language)
