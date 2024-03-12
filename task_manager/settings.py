@@ -180,8 +180,5 @@ ROLLBAR = {
 }
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://*.onrender.com',
-    'https://127.0.0.1',
-    'https://localhost',
-    'https://0.0.0.0',
+    'https://*.onrender.com'
 ]

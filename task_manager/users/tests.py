@@ -46,7 +46,7 @@ class UsersTest(TestCase):
     def test_user_create_get(self):
         response = self.client.get(reverse_lazy('create'))
 
-        self.assertTemplateUsed(response, template_name='registration.html')
+        self.assertTemplateUsed(response, template_name='form.html')
         self.assertEqual(response.status_code, 200)
 
     def test_user_create_post(self):
@@ -75,7 +75,7 @@ class UsersTest(TestCase):
         )
 
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, template_name='registration.html')
+        self.assertTemplateUsed(response, template_name='form.html')
 
     def test_user_update_without_auth(self):
         response = self.client.get(

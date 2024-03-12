@@ -10,11 +10,11 @@ from task_manager.custom_mixins import AuthCheckMixin, \
 
 class UserCreateView(SuccessMessageMixin, CreateView):
     """
-    Register new user by registration form - UserForm
+    Register new user by UserForm
     Redirect to login page
     Make message about success with SuccessMessageMixin
     """
-    template_name = 'registration.html'
+    template_name = 'form.html'
     model = User
     form_class = UserForm
     extra_context = {
@@ -46,7 +46,7 @@ class UserUpdateView(
     UpdateView
 ):
     """
-    Change user datas by registration form - UpdateUserForm
+    Change user datas by UpdateUserForm
     Using UpdateUserForm allows to make changes while keeping
     the old username
     In success redirect to list of users and make message
@@ -55,7 +55,7 @@ class UserUpdateView(
     to permission_url
     and make permission_message about error with PermissionCheckMixin
     """
-    template_name = 'registration.html'
+    template_name = 'form.html'
     model = User
     form_class = UpdateUserForm
 

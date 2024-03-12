@@ -32,14 +32,12 @@
       </form>
       {% else %}
       <div class="d-flex">
-        <form action="{% url 'login' %}" method="get">
-          {% csrf_token %}
+        <a href="{% url 'login' %}">
           <button type="submit" class="btn btn-dark">{{basic.login}}</button>
-        </form>
-        <form action="{% url 'create' %}" method="get">
-          {% csrf_token %}
+        </a>
+        <a href="{% url 'create' %}">
           <button type="submit" class="btn btn-dark">{{basic.register}}</button>
-        </form>
+        </a>
       </div>
         {% endif %}
       </ul>
