@@ -10,11 +10,11 @@ from task_manager import texts
 class UsersTest(TestCase):
     fixtures = ['users.json', 'statuses.json', 'tasks.json', 'labels.json']
     test_user = {
-          'username': 'Test',
-          'first_name': 'Test',
-          'last_name': 'Test',
-          'password1': '123',
-          'password2': '123',
+        'username': 'Test',
+        'first_name': 'Test',
+        'last_name': 'Test',
+        'password1': '123',
+        'password2': '123',
     }
 
     def setUp(self):

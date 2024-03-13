@@ -108,7 +108,7 @@ DATABASE_URL = os.getenv('DATABASE_URL')
 if DATABASE_URL:
     DATABASES['default'] = dj_database_url.config(
         default=DATABASE_URL, conn_max_age=600, conn_health_checks=True,
-)
+    )
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -161,7 +161,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 # This production code might break development mode, so we check whether we're in DEBUG mode
-if not DEBUG:    # Tell Django to copy static assets into a path called `staticfiles` (this is specific to Render)
+if not DEBUG:
     STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
     # Enable the WhiteNoise storage backend, which compresses static files to reduce disk use
     # and renames the files with unique names for each version to support long-term caching
